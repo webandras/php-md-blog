@@ -11,7 +11,7 @@ $translations['en-gb'] = [
     'our_address'                     => '',
     'our_email_address'               => 'gandras@passmail.net',
     'default_image'                   => '/assets/images/static.jpg',
-    'github'                          => 'https://github.com/webandras/php-md',
+    'github'                          => 'https://github.com/webandras/php-md-blog',
     'breadcrumb_home_text'            => 'Blog',
     'github_repo_text'                => 'GitHub Repository',
     'netlify_text'                    => 'Deploy to Netlify',
@@ -38,7 +38,7 @@ $translations['hu-hu'] = [
     // Required elements
     'website_name'                    => 'PHP-MD Blog',
     'website_description'             => 'Egy PHP alapú statikus oldalgenerátor, ami tiszta PHP-t és Markdown-t használ. Telepítsd a weboldaladat bármilyen osztott tárhelyre.',
-    'our_name'                        => 'PHP-MD Blogja',
+    'our_name'                        => 'PHP-MD Blog',
     'author'                          => 'Gulácsi András',
     'our_telnum'                      => '+36201234567',
     'our_address'                     => '',
