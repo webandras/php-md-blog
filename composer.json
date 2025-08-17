@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "league/commonmark": "^2.6",
-        "symfony/yaml": "^7.1",
+        "league/commonmark": "^2.7.1",
+        "symfony/yaml": "^7.3.2",
         "ext-intl": "*"
     }
 }
