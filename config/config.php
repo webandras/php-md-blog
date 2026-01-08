@@ -1,6 +1,7 @@
 <?php
 
 // The main config file
+// $env comes from the command line option (see the readme)
 if ($env === 'dev') {
     define('BASE_URL', 'http://localhost/phpmd_blog/public/');
 } else {
