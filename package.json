@@ -1,7 +1,7 @@
 {
-  "name": "php-md",
-  "version": "0.1.0",
-  "description": "A PHP-based static site generator that uses pure PHP and Markdown.",
+  "name": "php-md-blog",
+  "version": "1.2.2",
+  "description": "A simple PHP-based static site generator.",
   "scripts": {
     "webpack": "webpack",
     "webpack-watch": "webpack --watch",
