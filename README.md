@@ -1,13 +1,6 @@
 # PHP-MD Blog static site generator
 
-A PHP-based static site generator that uses pure PHP and Markdown. Deploy your website to any hosting platforms.
-
-_Current version: 1.2.2_
-
-- Todo: Add search functionality
-- Todo: Make it possible to only generate html from the modified/new markdown posts (with an option of forcing to
-  rebuild all files)
-
+A simple PHP-based static site generator that uses Markdown files as data source.
 
 ## Build your website
 
@@ -29,14 +22,15 @@ The **force** option is useful when you want to re-generate all post html files 
 _Note: Unfortunately, the generation of only modified posts won't work on Netlify. Your commit trigger (webhook from
 GitHub) the deployment, the buildbot will checkout your target branch, your files are copied into the container
 (which will be destroyed after the build process ends), so the file modification time will change. Moreover, it won't
-update the "buildtime.txt" file with the latest build time. Nevertheless, it works locally on your computer._
+update the "buildtime.txt" file with the latest build time. Nevertheless, it works locally._
 
 
 ## Config
 
-The global settings are defined in `config\config.php`. Update BASE_URL to your url.
+The global settings are defined in `config\config.php`. Update BASE_URL to your url!
 The localization settings are in `config\localizations.php` for each language.
 The translation strings in an associative arrays are set in `config\translations.php` for each language.
+Make sure that the ErrorDocument path for the 404 page is valid in the `.htaccess` file!
 
 ## Data / Template structure
 
@@ -54,13 +48,15 @@ The **extension** folder won't be touched in any future releases.
 ## Update engine version
 
 Download the newest release in a zip file, extract it, overwrite the content of your project's engine folder.
-The `generate.php`, configuration files, the templates, and the styles won't be updated 99% of the time (_starting 
+The `generate.php`, configuration files, the templates, and the styles won't be updated 99.9% of the time (_starting 
 from version number 1.2.1_).
 
 If there is a small change in any of the files outside the **engine** folder, there will be instructions which line 
 you should update. I am not planning to break the site builder with unnecessary rewrites, it is going to be version "1.x.x" forever.
 
 ## Publishing a website to Netlify
+
+You can also put it on shared hosting, but the Netlify deployment is presented here only.
 
 [Register to Netlify](https://www.netlify.com/)
 
@@ -167,34 +163,7 @@ Generate bundles with watching the file changes:
 npm run webpack-watch
 ```
 
-## Supplementary information about Docker (if someone might need it)
-
-Docker is popular virtualization software that helps its users in developing, deploying, monitoring, and running
-applications in a Docker Container with all their dependencies. Docker containers include all dependencies (frameworks,
-libraries, etc.) to run an application.
-
-A Docker container is basically a writable **OverlayFS** layer created on the very top of the numerous
-read-only OverlayFS layers of the Docker image (files copied on top of each other: each layer represents a command in
-the Dockerfile). A container is destroyed after the build has been completed (the top writable layer is removed).
-However, the data can be made permanent using volumes (which are kept).
-
-Docker is using the kernel and obviously the shared resources of the host (server), and is meant for process
-isolation. Containers are more lightweight, and don't have the overheads Virtual Machines
-do. [More about it](https://www.simplilearn.com/tutorials/docker-tutorial/docker-vs-virtual-machine).
-
-The images are based on **base images** (the FROM statement at the first line of a Dockerfile) that are special
-distributions that "think they are operating systems", but are more lightweight that a complete OS.
-
-[Alpine Linux](https://hub.docker.com/_/alpine/) is the most lightweight of them (around 5MB).
-
-Interesting to note,
-that [images can built from scratch as well](https://codeburst.io/docker-from-scratch-2a84552470c8) (scratch is a
-reserved image that is empty, and thus does nothing). The base images are built this way (_"FROM scratch"_).
-
-Lots of images are **pre-built** for us (like the `netlify/build` image) and stored in the **Docker registry** (not
-DockerHub, since that is just the user interface). There is no need to build them from Dockerfile, just to download them
-from the registry.
 
 ## License
 
-MIT © András Gulácsi 2024 - MIT license
+MIT © András Gulácsi 2024-2026 - MIT license
