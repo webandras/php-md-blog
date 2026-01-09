@@ -1,7 +1,15 @@
+@use "variables"
+
 .introduction
     text-align: center
     padding: 1.5em
-    border-bottom: 1px solid $lightgray
+    border-bottom: 1px solid variables.$lightgray
+
+    .netlify-image
+        width: 24px
+        height: 24px
+        position: relative
+        top: 4px
 
     h1
         padding-top: 1rem
@@ -14,14 +22,14 @@
             padding-top: 10px
             font-size: 34px
 
-    .introduction--link-center
+    .introduction__link-center
         display: flex
         align-items: center
         justify-content: center
         width: fit-content
         margin: 0 auto
 
-    .introduction-cta-row
+    .introduction__cta-row
         display: flex
         justify-content: center
         column-gap: 1em

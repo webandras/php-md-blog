@@ -1,5 +1,7 @@
+@use "variables"
+
 header.header
-    background-color: $white
+    background-color: variables.$white
     border-bottom: 1px solid rgb(229, 231, 235)
 
     nav.container
@@ -14,7 +16,7 @@ header.header
 
             &.logo-link
                 text-decoration: none
-                color: $darkgray
+                color: variables.$darkgray
 
                 span
                     text-decoration: none
@@ -53,12 +55,12 @@ header.header
                     a[aria-current="page"]
                         font-weight: 700
 
-        .header--section-1
+        .header__section-1
             display: flex
             flex-direction: row
             align-items: center
 
-        .header--section-2, .header--button-group
+        .header__section-2
             margin-left: 8px
             display: flex
             flex-direction: row

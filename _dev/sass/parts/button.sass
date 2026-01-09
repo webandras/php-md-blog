@@ -1,0 +1,36 @@
+@use "variables"
+
+button, .button
+    border-radius: 6px
+    background-color: variables.$primary
+    border: 1px solid variables.$primary-dark
+    margin: 1em 0.1em 0 0
+    padding: 0.6em 1.2em
+    color: #fff
+    cursor: pointer
+    text-decoration: none
+    line-height: normal
+
+    &:hover
+        background-color: variables.$primary-dark
+        border: 1px solid variables.$primary-darker
+        color: #fff
+
+    @media screen and (max-width: 550px)
+        width: 100%
+        display: block
+
+.button
+    text-align: center
+    width: auto !important
+    display: inline-block
+
+.alt
+    background-color: transparent
+    border: 1px solid variables.$primary
+    color: #333
+
+    &:hover
+        background-color: transparent
+        border: 1px solid variables.$primary
+        color: variables.$primary

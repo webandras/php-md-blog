@@ -5,13 +5,13 @@ const onLoad = () => {
     const deployBtn = document.querySelector('#deploy');
     if (deployBtn) {
         deployBtn.addEventListener("click", () => {
-            window.location.href = 'https://app.netlify.com/start/deploy?repository=https://github.com/webandras/php-md';
+            window.location.href = 'https://app.netlify.com/start/deploy?repository=https://github.com/webandras/php-md-blog';
         });
     }
 
+    // Dark mode switcher
     toggleDarkMode();
 
-    // dark mode switcher
     function toggleDarkMode() {
         const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
         const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
@@ -25,12 +25,11 @@ const onLoad = () => {
 
         const themeToggleBtn = document.getElementById('theme-toggle');
         themeToggleBtn.addEventListener('click', function () {
-
-            // toggle icons inside button
+            // Toggle icons inside button
             themeToggleDarkIcon.classList.toggle('hidden');
             themeToggleLightIcon.classList.toggle('hidden');
 
-            // if set via local storage previously
+            // If set via local storage previously
             if (localStorage.getItem('color-theme')) {
                 if (localStorage.getItem('color-theme') === 'light') {
                     document.documentElement.classList.add('dark');
@@ -39,7 +38,6 @@ const onLoad = () => {
                     document.documentElement.classList.remove('dark');
                     localStorage.setItem('color-theme', 'light');
                 }
-                // if NOT set via local storage previously
             } else {
                 if (document.documentElement.classList.contains('dark')) {
                     document.documentElement.classList.remove('dark');
@@ -49,13 +47,11 @@ const onLoad = () => {
                     localStorage.setItem('color-theme', 'dark');
                 }
             }
-
         });
     }
 
-    // SIDEBAR MENU
-    /* Set the width of the side navigation to 250px */
-    function openOffcanvasNavigation() {
+    // Sidebar menu
+    function openOffCanvasNavigation() {
         const defaultNavbar = document.getElementById("navbar-default");
         const defaultNavbarClone = defaultNavbar.cloneNode(true);
 
@@ -67,18 +63,17 @@ const onLoad = () => {
     }
 
     /* Set the width of the side navigation to 0, delete cloned menu */
-    function closeOffcanvasNavigation() {
+    function closeOffCanvasNavigation() {
         document.getElementById("main-sidenav").style.width = "0";
         document.getElementById("mobile-nav").innerText = '';
     }
 
     // Sidebar close button
-    document.getElementById('close-btn').addEventListener('click', closeOffcanvasNavigation);
+    document.getElementById('close-btn').addEventListener('click', closeOffCanvasNavigation);
 
     // Sidebar open menu
-    document.getElementById("toggle-menu").addEventListener('click', openOffcanvasNavigation);
+    document.getElementById("toggle-menu").addEventListener('click', openOffCanvasNavigation);
 
-    //
     const languageSwitcherTriggerBtn = document.getElementById("language-switcher-trigger-button");
     const languageSwitcherCurrentLanguage = document.getElementById("language-switcher-current-language");
 
@@ -89,9 +84,8 @@ const onLoad = () => {
             e.target.id !== 'toggle-menu-hamburger-icon'
         ) {
             if (e.target.offsetParent && e.target.offsetParent.id !== 'main-sidenav')
-                closeOffcanvasNavigation();
+                closeOffCanvasNavigation();
         }
-
 
         if (languageSwitcherTriggerBtn !== null && e.target.id !== 'language-switcher-dropdown' &&
             e.target.id !== 'language-switcher-trigger-button' &&
@@ -116,8 +110,6 @@ const onLoad = () => {
         const langDropdown = document.querySelector('.language-switcher-dropdown');
         langDropdown.style.display = (state === 'hide') ? 'none' : 'flex'
     }
-
 };
 
-// only execute when DOM is ready
 window.addEventListener("DOMContentLoaded", onLoad);

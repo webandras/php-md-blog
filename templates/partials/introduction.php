@@ -1,5 +1,5 @@
     <section class="introduction">
-        <a href="<?= $github ?>" class="introduction--link-center">
+        <a href="<?= $github ?>" class="introduction__link-center">
             <span><?= $documentation_text ?></span>
             <svg fill="currentColor" class="icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -10,7 +10,7 @@
         </a>
         <h1><?= $our_name ?></h1>
         <p><?= $website_description ?></p>
-        <div class="introduction-cta-row">
+        <div class="introduction__cta-row">
             <button id="deploy" role="button">
                 <img class="netlify-image" src="<?= BASE_URL.'assets/images/netlify.png' ?>" alt="Netlify logo"/>
                 <span><?= $netlify_text ?></span>

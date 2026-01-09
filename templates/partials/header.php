@@ -1,11 +1,11 @@
 <header class="header">
-    <nav class="container container-lg">
+    <nav class="container">
         <a href="<?= BASE_URL . get_language_segment($current_language_code) ?>">
             <img src="<?= BASE_URL . 'assets/images/php-md-logo.png' ?>" alt="<?= out($website_name) ?> logo" height="50px" width="95.83px"/>
             <span></span>
         </a>
 
-        <section class="header--section-1">
+        <section class="header__section-1">
             <section id="navbar-default">
                 <ul>
                     <li>
@@ -19,7 +19,7 @@
                 </ul>
             </section>
 
-            <section class="header--section-2">
+            <section class="header__section-2">
                 <button id="theme-toggle" class="alt" type="button" title="<?= $dark_mode_text ?>">
                     <svg id="theme-toggle-dark-icon" class="hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>

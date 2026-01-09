@@ -14,13 +14,14 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
-          // Runs PostCSS
-          'postcss-loader'
-
+          "css-loader", // Translates CSS into CommonJS
+          {
+            loader: "sass-loader", // Compiles Sass to CSS
+            options: {
+              api: "modern"
+            },
+          },
+          'postcss-loader' // Runs PostCSS
         ],
       }
     ]
@@ -32,7 +33,6 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: './../css/[name].css',
-      // filename: './../css/[name].[contenthash].css',
     }),
   ]
 };

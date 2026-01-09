@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-    <link href="<?= BASE_URL . 'assets/css/trongate.css' ?>" rel="stylesheet" type="text/css"/>
     <link href="<?= BASE_URL . 'assets/css/main.css' ?>" rel="stylesheet" type="text/css"/>
 
     <title><?= $our_name ?></title>
@@ -35,7 +30,7 @@
 <?php
 require $root_dir . '/templates/partials/header.php'; ?>
 
-<main class="container container-sm">
+<main class="container container-narrow">
     <section class="page-404">
         <h1><?= $page_not_found_title_text ?></h1>
         <p><?= $page_not_found_description_text ?></p>

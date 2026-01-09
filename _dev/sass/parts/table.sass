@@ -1,0 +1,25 @@
+@use "variables"
+
+table
+    border-collapse: collapse
+    width: 100%
+
+th
+    background-color: variables.$primary
+    color: #fff
+
+th,
+td
+    border: 1px variables.$primary-darker solid
+    padding: 0.7em
+
+td:hover
+    cursor: auto
+
+tr:hover,
+tr:nth-child(odd):hover
+    background-color: #fdfdea
+
+
+tr:nth-child(odd)
+    background-color: #f3f3f3
