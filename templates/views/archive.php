@@ -31,30 +31,30 @@ require $root_dir . '/templates/partials/header.php'; ?>
         <h1 class="archive-title"><?= $writings_text ?></h1>
 
         <ul class="blog--archive">
-            <?php
-            foreach ($year_month_groups as $year_month => $localized_year_month) { ?>
+			<?php
+			foreach ( $year_month_groups as $year_month => $localized_year_month ) { ?>
                 <li>
-                    <?php
-                    ?>
+					<?php
+					?>
                     <div><?= $localized_year_month ?></div>
                     <ul>
-                        <?php
-                        foreach ($posts as $post) {
-                            $post_date = new \DateTime($post['date_original'], new \DateTimeZone($timezone));
-                            if ($post_date->format('M Y') === $year_month) { ?>
+						<?php
+						foreach ( $posts as $post ) {
+							$post_date = new \DateTime( $post['date_original'], new \DateTimeZone( $timezone ) );
+							if ( $post_date->format( 'M Y' ) === $year_month ) { ?>
                                 <li>
                                     <h3>
                                         <a href="<?= $post['slug'] ?>"><?= $post['title'] ?></a>
                                     </h3>
                                 </li>
-                                <?php
-                            } ?>
-                            <?php
-                        } ?>
+								<?php
+							} ?>
+							<?php
+						} ?>
                     </ul>
                 </li>
-            <?php
-            } ?>
+				<?php
+			} ?>
         </ul>
     </section>
 </main>

@@ -9,9 +9,9 @@
 
     <title><?= $frontmatter['title'] ?></title>
 
-    <?php
-    require $root_dir . '/templates/partials/meta.php';
-    ?>
+	<?php
+	require $root_dir . '/templates/partials/meta.php';
+	?>
 
     <script type="text/javascript">
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -31,13 +31,13 @@
 require $root_dir . '/templates/partials/header.php'; ?>
 
 <main class="container container-narrow">
-    <?php
-    require $root_dir . '/templates/partials/breadcrumb.php'; ?>
+	<?php
+	require $root_dir . '/templates/partials/breadcrumb.php'; ?>
     <article>
-        <?php
-        require $root_dir . '/templates/partials/post-header.php'; ?>
+		<?php
+		require $root_dir . '/templates/partials/post-header.php'; ?>
 
-        <?= $content ?>
+		<?= $content ?>
 
     </article>
     <br>
@@ -51,4 +51,3 @@ require $root_dir . '/templates/partials/footer.php'; ?>
 
 </body>
 </html>
-

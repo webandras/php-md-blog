@@ -9,9 +9,9 @@
 
     <title><?= $our_name ?></title>
 
-    <?php
-    require $root_dir . '/templates/partials/meta.php';
-    ?>
+	<?php
+	require $root_dir . '/templates/partials/meta.php';
+	?>
 
     <script type="text/javascript">
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC

@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
-    <link href="<?= BASE_URL.'assets/css/main.css' ?>" rel="stylesheet" type="text/css"/>
+    <link href="<?= BASE_URL . 'assets/css/main.css' ?>" rel="stylesheet" type="text/css"/>
 
     <title><?= $our_name ?></title>
 
-    <?php
-    require $root_dir.'/templates/partials/meta.php';
-    ?>
+	<?php
+	require $root_dir . '/templates/partials/meta.php';
+	?>
 
     <script type="text/javascript">
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -30,14 +30,14 @@ require $root_dir . '/templates/partials/header.php'; ?>
 
 <main class="container container-narrow">
 
-    <?php
-    require $root_dir . '/templates/partials/introduction.php'; ?>
+	<?php
+	require $root_dir . '/templates/partials/introduction.php'; ?>
 
     <section>
         <h2><?= $newest_writings_text ?></h2>
         <ol class="post-list">
-            <?php
-            foreach ($posts as $post) { ?>
+			<?php
+			foreach ( $posts as $post ) { ?>
                 <li>
                     <time class="post-date"><?= $post['date'] ?></time>
                     <h3>
@@ -45,8 +45,8 @@ require $root_dir . '/templates/partials/header.php'; ?>
                     </h3>
                     <p><?= $post['excerpt'] ?></p>
                 </li>
-                <?php
-            } ?>
+				<?php
+			} ?>
         </ol>
         <p>
             <a href="<?= BASE_URL ?>archive"><?= $archive_text ?> &raquo;</a>
@@ -61,4 +61,3 @@ require $root_dir . '/templates/partials/footer.php'; ?>
 
 </body>
 </html>
-
